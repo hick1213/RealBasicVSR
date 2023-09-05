@@ -127,7 +127,7 @@ def main():
         for i in range(0, outputs.size(1)):
             img = tensor2img(outputs[:, i, :, :, :])
             video_writer.write(img.astype(np.uint8))
-        cv2.destroyAllWindows()
+        #cv2.destroyAllWindows()
         video_writer.release()
     else:
         mmcv.mkdir_or_exist(args.output_dir)
